@@ -1,136 +1,23 @@
 <html>
-<head>
+  <head>
+    <title>Snake</title>
 
-<link rel="stylesheet" href="css/master.css" type="text/css">
+    <script type="text/javascript"
+             src="jquery-1.9.1.js"></script>
+    <script type="text/javascript"
+             src="underscore.js"></script>
+    <script type="text/javascript"
+             src="snake.js"></script>
+    <script type="text/javascript"
+             src="snake_ui.js"></script>
+    <link rel="stylesheet" href="./snake.css"></link>
+  </head>
 
+  <body>
+    <div id="grid"></div>
 
-</head>
-
-<body>
-
-  <ul class="grid group">
-    <!-- <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li> -->
-
-  </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script type="application/javascript" src="vendor/jquery-1.9.1.js"></script>
-  <script type="application/javascript" src="vendor/underscore.js"></script>
-  <script type="application/javascript" src="lib/snake.js"></script>
-  <script type="application/javascript" src="lib/snake_ui.js"></script>
-
-  <script type="application/javascript">
-  $(function() {
-
-    for(var y = 0; y < 9; y++) {
-      for(var x = 0; x < 9; x++) {
-        $(".grid").append("\<li data-id=\"[" + y + ", " + x + "]\">\<\/li>");
-      }
-    }
-
-    var view = new SnakeUI.View($('.grid'));
-    view.start();
-  });
-
-  </script>
-
-</body>
-
+    <script>
+      $(function () { new SG.View($("#grid")).start(); });
+    </script>
+  </body>
 </html>
