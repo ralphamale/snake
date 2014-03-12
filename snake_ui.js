@@ -15,7 +15,7 @@
     37: "W"
   };
 
-  View.STEP_MILLIS = 100;
+  View.STEP_MILLIS = 80;
 
   View.prototype.handleKeyEvent = function (event) {
     if (_(View.KEYS).has(event.keyCode)) {

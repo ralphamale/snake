@@ -61,7 +61,7 @@
   }
 
   Snake.prototype.turn = function (dir) {
-    // Unfortunately, this means you can turn directly backward into yourself.
+    //need to fix so cant turn into itself
     this.dir = dir;
   };
 
@@ -101,11 +101,9 @@
       grid[seg.i][seg.j] = Snake.SYMBOL;
     });
 
-    var apple_pos = this.apple.position
-
+    var apple_pos = this.apple.position;
     grid[apple_pos.i][apple_pos.j] = Apple.SYMBOL;
 
-    // join it up
     return _(grid).map(function (row) { return row.join(""); }).join("\n");
   };
 })(this);
